@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home - Hotel Room Safe application</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" th:href="@{/}"> Hotel Room Safe application</a>
+            <ul class="nav">
+                <li><a th:href="@{/}" href="home.html"> Home </a></li>
+            </ul>
+        </div>
+    </div>
+    <h1>Home</h1>
+    <h4>Mp18 - Hotel Room Safe <br/>
+        The Hotel Room Safe application has one page that shows the belongings of the customer of that room. This page can only be accessed with one html login page where the customer can write the credentials with the username as “guest” and the password as “secret”. The application must provide its own implementation of the login form and encrypt the password of the in memory user details manager with the bcrypt password encoding algorithm.
+    </h4>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+</body>
+</html>
